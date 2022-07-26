@@ -19,6 +19,6 @@ Verify that the application is running in Nirmata
 
 To use the snapshot functionality of the Amazon EBS CSI driver, you must install the external snapshotter before the installation of the EBS CSI driver. The external snapshotter components must be installed in the following order:
 * CustomResourceDefinition (CRD) for volumesnapshotclasses, volumesnapshots, and volumesnapshotcontents
-* RBAC
+* [RBAC](https://github.com/kubernetes-csi/external-snapshotter/blob/master/deploy/kubernetes/snapshot-controller/rbac-snapshot-controller.yaml)
 * controller deployment
 * VolumeSnapshotClass
