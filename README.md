@@ -23,7 +23,7 @@ To use the snapshot functionality of the Amazon EBS CSI driver, you must install
 * [controller deployment](https://github.com/kubernetes-csi/external-snapshotter/blob/master/deploy/kubernetes/snapshot-controller/setup-snapshot-controller.yaml)
 * [VolumeSnapshotClass](https://gist.github.com/nsagark/be1c0a64bc7b2d44080dd9c6af4a53e6)
 
-To deploy these components, create a git app in Nirmata and point it to this below repo. The git app in Nirmata needs to be deployed asn an add-on in the kube-system namespace
+To deploy these components, create a git app in Nirmata and point it to this below repo. The git app in Nirmata needs to be deployed as an add-on in the kube-system namespace
 
 https://github.com/nsagark/volumesnapshot.git
 
