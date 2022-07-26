@@ -14,3 +14,7 @@ This README documents the `Velero` integration as an add-on that can be deployed
 6. If the addon is to be added to a running cluster, create an environment with the namespace "velero" and choose this environment while deploying the application
 Verify that the application is running in Nirmata
 7. Once the addon is installed, configure velero with the aws access key id and secret access key for the first time. Also setup backup storage location and volume snapshot locations before taking backups. 
+
+## ImporEBS CSI driver
+
+To use the snapshot functionality of the Amazon EBS CSI driver, you must install the external snapshotter before the installation of the EBS CSI driver
