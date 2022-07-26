@@ -22,3 +22,5 @@ To use the snapshot functionality of the Amazon EBS CSI driver, you must install
 * [RBAC](https://github.com/kubernetes-csi/external-snapshotter/blob/master/deploy/kubernetes/snapshot-controller/rbac-snapshot-controller.yaml)
 * [controller deployment](https://github.com/kubernetes-csi/external-snapshotter/blob/master/deploy/kubernetes/snapshot-controller/setup-snapshot-controller.yaml)
 * [VolumeSnapshotClass](https://gist.github.com/nsagark/be1c0a64bc7b2d44080dd9c6af4a53e6)
+
+Before backing and restoring gp3 volumes, make sure above compoents are installed in your cluster 
