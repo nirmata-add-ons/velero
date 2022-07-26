@@ -1,8 +1,8 @@
 # velero
-This README documents the velero integration as an add-on that can be deployed on Kubernetes clusters using Nirmata Kubernetes Platform
+This README documents the `Velero` integration as an add-on that can be deployed on Kubernetes clusters using Nirmata Kubernetes Platform
 
 ## what is Velero
-Velero is a tool to safely backup and restore, perform disaster recovery, and migrate Kubernetes cluster resources and persistent volumes
+`Velero` is a tool to safely backup and restore, perform disaster recovery, and migrate Kubernetes cluster resources and persistent volumes
 
 ## How do I get setup?
 
