@@ -2061,6 +2061,7 @@ spec:
   securityContext:
     runAsNonRoot: true
     allowPrivilegeEscalation: false
+    runAsUser: 65532
   template:
     metadata:
       annotations:
