@@ -38,3 +38,8 @@ spec:
             - "--v=5"
             - "--leader-election=true"
           imagePullPolicy: IfNotPresent
+          securityContext:
+            privileged: false
+            allowPrivilegeEscalation: false
+            runAsNonRoot: true
+            runAsUser: 65535
