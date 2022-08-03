@@ -2067,7 +2067,7 @@ spec:
         - ALL
         - CAP_NET_RAW
       add:
-        - CAP_NET_ADMIN
+        - CAP_SYS_ADMIN
   template:
     metadata:
       annotations:
@@ -2107,7 +2107,7 @@ spec:
               - ALL
               - CAP_NET_RAW
             add:
-              - CAP_NET_ADMIN
+              - CAP_SYS_ADMIN
         command:
         - "/velero"
         args:
@@ -2156,7 +2156,7 @@ spec:
               - ALL
               - CAP_NET_RAW
             add:
-              - CAP_NET_ADMIN
+              - CAP_SYS_ADMIN
         command: []
         args: []
         imagePullPolicy: "IfNotPresent"
@@ -2173,7 +2173,7 @@ spec:
               - ALL
               - CAP_NET_RAW
             add:
-              - CAP_NET_ADMIN
+              - CAP_SYS_ADMIN
         command: []
         args: []
         imagePullPolicy: "IfNotPresent"
@@ -2273,7 +2273,7 @@ spec:
               - ALL
               - CAP_NET_RAW
             add:
-              - CAP_NET_ADMIN
+              - CAP_SYS_ADMIN
         resources:
           limits:
             cpu: "1000m"
@@ -2290,7 +2290,7 @@ spec:
             - ALL
             - CAP_NET_RAW
           add:
-            - CAP_NET_ADMIN
+            - CAP_SYS_ADMIN
   updateStrategy:
     type: "RollingUpdate"
     rollingUpdate:
