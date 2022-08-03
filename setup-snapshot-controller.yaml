@@ -11,6 +11,10 @@ apiVersion: apps/v1
 metadata:
   name: snapshot-controller
   namespace: velero
+  labels: 
+    app.kubernetes.io/name: "snapshot-controller"
+    app.kubernetes.io/instance: "snapshot-controller-velero-aws"
+    app.kubernetes.io/component: "velero-aws"
 spec:
   replicas: 2
   selector:
@@ -28,7 +32,10 @@ spec:
   template:
     metadata:
       labels:
-        app: snapshot-controller
+        app: "snapshot-controller"
+        app.kubernetes.io/name: "snapshot-controller"
+        app.kubernetes.io/instance: "snapshot-controller-velero-aws"
+        app.kubernetes.io/component: "velero-aws"
     spec:
       serviceAccountName: snapshot-controller
       containers:
@@ -38,8 +45,21 @@ spec:
             - "--v=5"
             - "--leader-election=true"
           imagePullPolicy: IfNotPresent
+          resources:
+            limits:
+              cpu: "1000m"
+              memory: "512Mi"
+            requests:
+              cpu: "500m"
+              memory: "128Mi"
           securityContext:
             privileged: false
             allowPrivilegeEscalation: false
             runAsNonRoot: true
             runAsUser: 65535
+            capabilities:
+              drop:
+                - ALL
+                - CAP_NET_RAW
+              add:
+                - CAP_NET_ADMIN

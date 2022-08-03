@@ -2096,6 +2096,12 @@ spec:
           allowPrivilegeEscalation: false
           runAsNonRoot: true
           runAsUser: 65535
+          capabilities:
+            drop:
+              - ALL
+              - CAP_NET_RAW
+            add:
+              - CAP_NET_ADMIN
         command:
         - "/velero"
         args:
@@ -2139,6 +2145,12 @@ spec:
           allowPrivilegeEscalation: false
           runAsNonRoot: true
           runAsUser: 65535
+          capabilities:
+            drop:
+              - ALL
+              - CAP_NET_RAW
+            add:
+              - CAP_NET_ADMIN
         command: []
         args: []
         imagePullPolicy: "IfNotPresent"
@@ -2150,6 +2162,12 @@ spec:
         securityContext:
           allowPrivilegeEscalation: false
           runAsNonRoot: true
+          capabilities:
+            drop:
+              - ALL
+              - CAP_NET_RAW
+            add:
+              - CAP_NET_ADMIN
         command: []
         args: []
         imagePullPolicy: "IfNotPresent"
@@ -2244,6 +2262,12 @@ spec:
           allowPrivilegeEscalation: false
           runAsNonRoot: true
           runAsUser: 65535
+          capabilities:
+            drop:
+              - ALL
+              - CAP_NET_RAW
+            add:
+              - CAP_NET_ADMIN
         resources:
           limits:
             cpu: "1000m"
@@ -2255,7 +2279,12 @@ spec:
         allowPrivilegeEscalation: false
         runAsNonRoot: true
         runAsUser: 65535
-        supplementalGroups: []
+        capabilities:
+          drop:
+            - ALL
+            - CAP_NET_RAW
+          add:
+            - CAP_NET_ADMIN
   updateStrategy:
     type: "RollingUpdate"
     rollingUpdate:
