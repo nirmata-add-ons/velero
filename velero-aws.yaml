@@ -2062,6 +2062,12 @@ spec:
     runAsNonRoot: true
     allowPrivilegeEscalation: false
     runAsUser: 65535
+    capabilities:
+      drop:
+        - ALL
+        - CAP_NET_RAW
+      add:
+        - CAP_NET_ADMIN
   template:
     metadata:
       annotations:
