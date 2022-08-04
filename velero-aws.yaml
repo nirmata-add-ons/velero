@@ -2059,8 +2059,7 @@ spec:
       maxSurge: 1
       maxUnavailable: 0
   securityContext:
-    runAsNonRoot: true
-    allowPrivilegeEscalation: false
+    runAsNonRoot: true    
     runAsUser: 65535
     capabilities:
       drop:
@@ -2099,7 +2098,6 @@ spec:
       - name: "velero"
         image: "velero/velero:v1.9.0"
         securityContext:
-          allowPrivilegeEscalation: false
           runAsNonRoot: true
           runAsUser: 65535
           capabilities:
@@ -2148,7 +2146,6 @@ spec:
       - name: "velero-plugin-for-csi"
         image: "velero/velero-plugin-for-csi:v0.3.0"
         securityContext:
-          allowPrivilegeEscalation: false
           runAsNonRoot: true
           runAsUser: 65535
           capabilities:
@@ -2166,7 +2163,6 @@ spec:
       - name: "velero-plugin-for-aws"
         image: "velero/velero-plugin-for-aws:v1.5.0"
         securityContext:
-          allowPrivilegeEscalation: false
           runAsNonRoot: true
           capabilities:
             drop:
@@ -2264,8 +2260,7 @@ spec:
         - name: "scratch"
           mountPath: "/scratch"
         securityContext:
-          privileged: false
-          allowPrivilegeEscalation: false
+          privileged: false          
           runAsNonRoot: true
           runAsUser: 65535
           capabilities:
@@ -2281,8 +2276,7 @@ spec:
           requests:
             cpu: "500m"
             memory: "512Mi"
-      securityContext:
-        allowPrivilegeEscalation: false
+      securityContext:        
         runAsNonRoot: true
         runAsUser: 65535
         capabilities:
