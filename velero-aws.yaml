@@ -2062,6 +2062,7 @@ spec:
     allowPrivilegeEscalation: false
     runAsNonRoot: true    
     runAsUser: 65535
+    privileged: false
   template:
     metadata:
       annotations:
@@ -2096,6 +2097,7 @@ spec:
           allowPrivilegeEscalation: false
           runAsNonRoot: true
           runAsUser: 65535
+          privileged: false
         command:
         - "/velero"
         args:
@@ -2139,6 +2141,7 @@ spec:
           allowPrivilegeEscalation: false
           runAsNonRoot: true
           runAsUser: 65535
+          privileged: false
         command: []
         args: []
         imagePullPolicy: "IfNotPresent"
@@ -2150,6 +2153,8 @@ spec:
         securityContext:
           allowPrivilegeEscalation: false
           runAsNonRoot: true
+          runAsUser: 65535
+          privileged: false
         command: []
         args: []
         imagePullPolicy: "IfNotPresent"
@@ -2255,6 +2260,7 @@ spec:
         allowPrivilegeEscalation: false
         runAsNonRoot: true
         runAsUser: 65535
+        privileged: false
   updateStrategy:
     type: "RollingUpdate"
     rollingUpdate:
