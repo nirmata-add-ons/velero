@@ -2061,7 +2061,7 @@ spec:
   securityContext:
     allowPrivilegeEscalation: false
     runAsNonRoot: true    
-    runAsUser: 65535
+    runAsUser: 65532
     privileged: false
   template:
     metadata:
@@ -2096,7 +2096,7 @@ spec:
         securityContext:
           allowPrivilegeEscalation: false
           runAsNonRoot: true
-          runAsUser: 65535
+          runAsUser: 65532
           privileged: false
         command:
         - "/velero"
@@ -2140,7 +2140,7 @@ spec:
         securityContext:
           allowPrivilegeEscalation: false
           runAsNonRoot: true
-          runAsUser: 65535
+          runAsUser: 65532
           privileged: false
         command: []
         args: []
@@ -2153,7 +2153,7 @@ spec:
         securityContext:
           allowPrivilegeEscalation: false
           runAsNonRoot: true
-          runAsUser: 65535
+          runAsUser: 65532
           privileged: false
         command: []
         args: []
@@ -2248,7 +2248,7 @@ spec:
           allowPrivilegeEscalation: false
           privileged: false          
           runAsNonRoot: true
-          runAsUser: 65535
+          runAsUser: 65532
         resources:
           limits:
             cpu: "1000m"
@@ -2259,7 +2259,7 @@ spec:
       securityContext:
         allowPrivilegeEscalation: false
         runAsNonRoot: true
-        runAsUser: 65535
+        runAsUser: 65532
         privileged: false
   updateStrategy:
     type: "RollingUpdate"
