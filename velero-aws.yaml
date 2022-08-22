@@ -2246,9 +2246,9 @@ spec:
           mountPath: "/scratch"
         securityContext:
           allowPrivilegeEscalation: false
-          privileged: false          
+          privileged: false     
           runAsNonRoot: true
-          runAsUser: 65532
+          runAsUser: 65535
         resources:
           limits:
             cpu: "1000m"
@@ -2259,7 +2259,7 @@ spec:
       securityContext:
         allowPrivilegeEscalation: false
         runAsNonRoot: true
-        runAsUser: 65532
+        runAsUser: 65535
         privileged: false
   updateStrategy:
     type: "RollingUpdate"
