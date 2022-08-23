@@ -2127,20 +2127,6 @@ spec:
           mountPath: "/credentials"
         - name: "scratch"
           mountPath: "/scratch"
-        readinessProbe:
-          exec:
-            command:
-            - cat
-            - /etc/passwd
-          initialDelaySeconds: 5
-          periodSeconds: 5
-        livenessProbe:
-          exec:
-            command:
-            - cat
-            - /etc/passwd
-          initialDelaySeconds: 5
-          periodSeconds: 5
         resources:
           limits:
             cpu: "1000m"
@@ -2159,20 +2145,6 @@ spec:
         command: []
         args: []
         imagePullPolicy: "IfNotPresent"
-        readinessProbe:
-          exec:
-            command:
-            - cat
-            - /etc/passwd
-          initialDelaySeconds: 5
-          periodSeconds: 5
-        livenessProbe:
-          exec:
-            command:
-            - cat
-            - /etc/passwd
-          initialDelaySeconds: 5
-          periodSeconds: 5
         volumeMounts:
         - name: "plugins"
           mountPath: "/target"
@@ -2186,20 +2158,6 @@ spec:
         command: []
         args: []
         imagePullPolicy: "IfNotPresent"
-        readinessProbe:
-          exec:
-            command:
-            - cat
-            - /etc/passwd
-          initialDelaySeconds: 5
-          periodSeconds: 5
-        livenessProbe:
-          exec:
-            command:
-            - cat
-            - /etc/passwd
-          initialDelaySeconds: 5
-          periodSeconds: 5
         volumeMounts:
         - name: "plugins"
           mountPath: "/target"
@@ -2286,20 +2244,6 @@ spec:
           mountPath: "/host_pods"
         - name: "scratch"
           mountPath: "/scratch"
-        readinessProbe:
-          exec:
-            command:
-            - cat
-            - /etc/passwd
-          initialDelaySeconds: 5
-          periodSeconds: 5
-        livenessProbe:
-          exec:
-            command:
-            - cat
-            - /etc/passwd
-          initialDelaySeconds: 5
-          periodSeconds: 5
         resources:
           limits:
             cpu: "1000m"
