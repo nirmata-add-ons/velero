@@ -52,20 +52,6 @@ spec:
             requests:
               cpu: "500m"
               memory: "128Mi"
-          readinessProbe:
-            exec:
-              command:
-              - cat
-              - /etc/passwd
-            initialDelaySeconds: 5
-            periodSeconds: 5
-          livenessProbe:
-            exec:
-              command:
-              - cat
-              - /etc/passwd
-            initialDelaySeconds: 5
-            periodSeconds: 5
           securityContext:
             privileged: false
             allowPrivilegeEscalation: false
